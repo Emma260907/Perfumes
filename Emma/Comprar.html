@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pure Scent - Checkout</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+       body {
+           font-family: 'Montserrat', sans-serif;
+           background-color: #f7f7f7;
+           margin: 0;
+           padding: 0;
+           color: #333;
+       }
+       header {
+           background: linear-gradient(135deg, #b8861a, #000000);
+           color: white;
+           padding: 40px 20px;
+           text-align: center;
+       }
+       h1 {
+           margin: 0;
+           font-size: 3em;
+           font-family: 'Kaushan Script', serif;
+           letter-spacing: 2px;
+       }
+       .checkout-container {
+           background-color: white;
+           max-width: 600px;
+           margin: 50px auto;
+           padding: 40px;
+           border-radius: 10px;
+           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+       }
+       h2 {
+           font-family: 'Playfair Display', serif;
+           font-size: 2em;
+           color: #694c0e;
+           text-align: center;
+           margin-bottom: 20px;
+       }
+       form {
+           display: flex;
+           flex-direction: column;
+           gap: 20px;
+       }
+       label {
+           font-size: 1.2em;
+           color: #333;
+       }
+       input[type="text"],
+       input[type="email"],
+       input[type="tel"],
+       input[type="number"] {
+           width: 100%;
+           padding: 12px;
+           border: 1px solid #ddd;
+           border-radius: 5px;
+           font-size: 1em;
+       }
+       input[type="submit"] {
+           background-color: #694b0b;
+           color: white;
+           padding: 15px;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           font-size: 1.2em;
+           transition: background-color 0.3s;
+       }
+       input[type="submit"]:hover {
+           background-color: #b8861a;
+       }
+       .form-group {
+           display: flex;
+           flex-direction: column;
+       }
+       .double-input {
+           display: flex;
+           justify-content: space-between;
+           gap: 20px;
+       }
+       .double-input input {
+           flex: 1;
+       }
+       .terms {
+           font-size: 0.9em;
+           text-align: center;
+           margin-top: 20px;
+       }
+       footer {
+           text-align: center;
+           padding: 20px;
+           background-color: #333;
+           color: white;
+           position: relative;
+           bottom: 0;
+           width: 100%;
+       }
+       footer p {
+           margin: 5px 0;
+           font-size: 0.9em;
+       }
+</style>
+</head>
+<body>
+<header>
+<h1>Pure Scent</h1>
+<p>Payment Form</p>
+</header>
+<div class="checkout-container">
+<h2>Purchase Information</h2>
+<form action="/confirmar-compra" method="POST">
+<!-- Nombre -->
+<div class="form-group">
+<label for="nombre">Complete Name</label>
+<input type="text" id="nombre" name="nombre" placeholder="Insert your complete name" required>
+</div>
+<!-- Correo -->
+<div class="form-group">
+<label for="correo">Email</label>
+<input type="email" id="correo" name="correo" placeholder="Insert your Email" required>
+</div>
+<!-- Teléfono -->
+<div class="form-group">
+<label for="telefono">Phone Numbre</label>
+<input type="tel" id="telefono" name="telefono" placeholder="Insert your phone number" required>
+</div>
+<!-- Dirección -->
+<div class="form-group">
+<label for="direccion">Mailing Address</label>
+<input type="text" id="direccion" name="direccion" placeholder="Insert mailing address" required>
+</div>
+<!-- Número de Tarjeta -->
+<div class="form-group">
+<label for="tarjeta">Card Number</label>
+<input type="number" id="tarjeta" name="tarjeta" placeholder="Insert card number" required>
+</div>
+<!-- Expiración y CVV -->
+<div class="double-input">
+<div class="form-group">
+<label for="expiracion">Expiration Date</label>
+<input type="text" id="expiracion" name="expiracion" placeholder="MM/AA" required>
+</div>
+<div class="form-group">
+<label for="cvv">CVV</label>
+<input type="number" id="cvv" name="cvv" placeholder="Code CVV" required>
+</div>
+</div>
+<!-- Botón de Confirmar Compra -->
+<input type="submit" value="Confirm Purchase">
+</form>
+<p class="terms">By clicking "Confirm Purchase", you accept the terms and conditions of Pure Scent.</p>
+</div>
+<footer>
+<p>&copy; 2024 Pure Scent. All the rights reserved.</p>
+<p>Contact us: info@purescent.com</p>
+</footer>
+</body>
+</html>
